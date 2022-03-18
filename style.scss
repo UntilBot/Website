@@ -1,1 +1,22 @@
-$
+// Colors
+$blurple-bg-light: #7680f4;
+$blurple-bg: #5865f2;
+$blurple-bg-dark: #313ed3;
+$white-bg-light: #cfd2f0;
+$blue-secondary-light: #c6c8f5;
+$blue-secondary-dark: #9ea3e6;
+
+body {
+  background-color: $blurple-bg;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title {
+    text-align: center;
+    font-size: 172px;
+    background: -webkit-linear-gradient(-90deg, $blue-secondary-light, $blue-secondary-dark);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
