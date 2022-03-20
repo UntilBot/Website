@@ -1,10 +1,35 @@
+@charset 'utf-8';
+
+/* Slightly lighten a color
+@access public
+@param {Color} $color - color to tint
+@param {Number} $percentage - percentage of `$color` in returned color
+@return {Color}*/
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/*Slightly darken a color
+@access public
+@param {Color} $color - color to shade
+@param {Number} $percentage - percentage of `$color` in returned color
+@return {Color}*/
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
 // Colors
-$blurple-bg-light: #7680f4;
-$blurple-bg: #5865f2;
-$blurple-bg-dark: #313ed3;
-$white-bg-light: #cfd2f0;
-$blue-secondary-light: #c6c8f5;
-$blue-secondary-dark: #9ea3e6;
+$blurple-bg: hsl(235, 86%, 65%); //base color
+$blurple-bg-light: tint($blurple-bg, 18); //10-20 jó
+$blurple-bg-dark: shade($blurple-bg, 18);
+$blurple-bg-dark2: hsl(235, 65%, 51%);
+$r: hsl(235, 50%, 52%); //20
+$r: hsl(235, 51%, 53%); //19
+$a: hsl(235, 53%, 53%); //18
+$b: hsl(235, 54%, 54%); //17
+$white-bg-light: hsl(235, 52%, 88%);
+$blue-secondary-light: hsl(237, 70%, 87%);
+$blue-secondary-dark: hsl(236, 59%, 76%);
 
 body {
   background-color: $blurple-bg;
@@ -12,11 +37,40 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+@mixin center {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.title-logo {
+  @include center;
+  top: -60px;
+}
+
+.title,
+.title2 {
+  position: relative;
+  text-align: center;
+}
+
 .title {
-    text-align: center;
-    font-size: 172px;
-    background: -webkit-linear-gradient(-90deg, $blue-secondary-light, $blue-secondary-dark);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-size: 172px;
+  top: 120px;
+  color: white;
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    color: $blurple-bg-light;
+  }
+}
+
+.title2 {
+  font-size: 122px;
+  top: -40px;
+  background: -webkit-linear-gradient(275deg, tint($blue-secondary-light, 20), shade($blue-secondary-dark, 10));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

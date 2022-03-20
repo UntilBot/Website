@@ -1,13 +1,48 @@
+/* Slightly lighten a color
+@access public
+@param {Color} $color - color to tint
+@param {Number} $percentage - percentage of `$color` in returned color
+@return {Color}*/
+/*Slightly darken a color
+@access public
+@param {Color} $color - color to shade
+@param {Number} $percentage - percentage of `$color` in returned color
+@return {Color}*/
 body {
-  background-color: #5865f2;
+  background-color: #5966f3;
   color: white;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.title {
+.title-logo {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: -60px;
+}
+
+.title,
+.title2 {
+  position: relative;
   text-align: center;
+}
+
+.title {
   font-size: 172px;
-  background: -webkit-linear-gradient(-90deg, #c6c8f5, #9ea3e6);
+  top: 120px;
+  color: white;
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.title:hover {
+  color: #7781f5;
+}
+
+.title2 {
+  font-size: 122px;
+  top: -40px;
+  background: -webkit-linear-gradient(275deg, #d2d4f7, #8e92cf);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
