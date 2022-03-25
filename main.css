@@ -1,1 +1,83 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+body {
+  background: linear-gradient(145deg, #4f5bda, #5e6cff);
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 1000px;
+}
+
+.title-logo {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: -60px;
+}
+
+.title {
+  position: relative;
+  text-align: center;
+  font-size: 172px;
+  top: 120px;
+  color: white;
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.title2 {
+  font-size: 122px;
+  top: -40px;
+  background: -webkit-linear-gradient(275deg, tint(#c7c9f5, 20), shade(#9ea3e6, 10));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.box,
+.box2 {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 600px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50px;
+  background: white;
+  -webkit-box-shadow: 10px 10px 20px #4b56ce, -10px -10px 20px #6574ff;
+          box-shadow: 10px 10px 20px #4b56ce, -10px -10px 20px #6574ff;
+}
+
+.box2 {
+  top: 900px;
+  -webkit-box-shadow: 10px 10px 20px #4b56ce, -10px -10px 20px #6574ff;
+          box-shadow: 10px 10px 20px #4b56ce, -10px -10px 20px #6574ff;
+}
+
+.box:nth-of-type(1) {
+  background: #5865f2;
+  left: -1200px;
+}
+
+.box:nth-of-type(2) {
+  background: linear-gradient(145deg, #4f5bda, #5e6cff);
+  left: -600px;
+}
+
+.box:nth-of-type(3) {
+  background: linear-gradient(145deg, #5e6cff, #4f5bda);
+  left: 0;
+}
+
+.box:nth-of-type(4) {
+  background: #5865f2;
+  -webkit-box-shadow: inset 10px 10px 20px #4b56ce, inset -10px -10px 20px #6574ff;
+          box-shadow: inset 10px 10px 20px #4b56ce, inset -10px -10px 20px #6574ff;
+  left: 600px;
+}
+
+.box:nth-of-type(5) {
+  background: linear-gradient(145deg, #5e6cff, #4f5bda);
+  -webkit-box-shadow: inset 10px 10px 20px #4b56ce, inset -10px -10px 20px #6574ff, 10px 10px 20px #4b56ce, -10px -10px 20px #6574ff;
+          box-shadow: inset 10px 10px 20px #4b56ce, inset -10px -10px 20px #6574ff, 10px 10px 20px #4b56ce, -10px -10px 20px #6574ff;
+  left: 1200px;
+}
+/*# sourceMappingURL=main.css.map */
